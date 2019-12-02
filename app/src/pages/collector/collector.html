@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-buttons></ion-menu-buttons>
+      </ion-buttons>
+      <ion-title>Coletores</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content no-padding>
+  <div class="admin">
+    <button ion-button icon-only clear color="light" (click)="adminOptions()">
+      <ion-icon name="settings"></ion-icon>
+    </button>
+  </div>
+  <div class="blur">
+    <p class="call">Cloetores</p>
+    <div class="collector" *ngFor="let item of collectors | orderby: 'nameCollector'" tappable>
+      <p>{{item.nameCollector}}</p>
+    </div>
+  </div>
+</ion-content>

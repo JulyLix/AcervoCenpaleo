@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-buttons></ion-menu-buttons>
+    </ion-buttons>
+    <ion-title>Peça</ion-title>
+    <ion-buttons right>
+      <button ion-button clear (click)="salvar()">
+        Salvar
+      </button>
+      <button *ngIf='piece._id' ion-button icon-only (click)="delete()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list >
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input [(ngModel)]="piece.namePiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Número Peça</ion-label>
+      <ion-input [(ngModel)] = "piece.numberPiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Partição Peça</ion-label>
+      <ion-input [(ngModel)]="piece.partitionPiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Importância Peça</ion-label>
+      <ion-input [(ngModel)]="piece.importancePiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Sítio Paleontológico</ion-label>
+        <ion-select [(ngModel)]="piece.paleontSitePiece">
+          <ion-option value="{{item._id}}" *ngFor="let item of paleontSite">{{item.namePaleontSite}}</ion-option>
+        </ion-select>
+      </ion-item>
+    <ion-item>
+      <ion-label floating>Afloramento Peça</ion-label>
+      <ion-input [(ngModel)]="piece.outcropPiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Localização Física</ion-label>
+      <ion-input [(ngModel)]="piece.physicalLocPiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Descrição</ion-label>
+      <ion-input [(ngModel)]="piece.descriptionPiece" rows="4"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Estado da Peça</ion-label>
+      <ion-input [(ngModel)]="piece.statusPiece" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Coleção</ion-label>
+      <ion-select [(ngModel)]="piece.collectionPiece">
+        <ion-option value="{{item._id}}" *ngFor="let item of collection">{{item.nameCollection}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-item>
+            <ion-label>Sub-Coleção</ion-label>
+            <ion-checkbox [(ngModel)]="piece.subCollectionPiece">
+              <ion-option value="{{item._id}}" *ngFor="let item of subCollection">{{item.nameCollection}}</ion-option>
+            </ion-checkbox>
+          </ion-item>
+      <ion-label>Coletor</ion-label>
+      <ion-select [(ngModel)]="piece.collectorPiece">
+        <ion-option value="{{item._id}}" *ngFor="let item of collector">{{item.nameCollector}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item text-center>
+        <button ion-button clear (click)="getPictureOption()">
+          <ion-icon name="camera" item-left></ion-icon>
+          Selecionar Foto
+        </button>
+      </ion-item>
+      <ion-item *ngIf="piece.imagePiece">
+        <img [src]="piece.imagePiece">
+      </ion-item>
+  </ion-list>
+</ion-content>

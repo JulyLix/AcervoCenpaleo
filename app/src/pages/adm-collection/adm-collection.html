@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-buttons></ion-menu-buttons>
+        </ion-buttons>
+    <ion-title>Coleções</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="addOrEdit({})">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list lines>
+    <ion-item text-wrap *ngIf="list.length == 0">
+      Você não tem nenhuma coleção cadastrada.
+    </ion-item>
+    <ion-item *ngFor="let item of list" text-wrap (click)="addOrEdit(item)">
+      {{ item.nameCollection }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-buttons></ion-menu-buttons>
+          </ion-buttons>
+      <ion-title>Sítio Paleontológico</ion-title>
+      <ion-buttons right>
+        <button ion-button clear (click)="salvar()">
+          Salvar
+        </button>
+        <button *ngIf="paleontSite._id" ion-button icon-only (click)="excluir()">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <div #mapElement class="map"></div>
+</ion-content>

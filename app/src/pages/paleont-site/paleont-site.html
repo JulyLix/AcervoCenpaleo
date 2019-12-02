@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-buttons></ion-menu-buttons>
+      </ion-buttons>
+      <ion-title>Sítios Paleontológicos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content no-padding>
+  <div class="top"></div>
+  <div class="plaeontSites">
+    <div class="paleontSite" *ngFor="let item of plaeontSite | orderBy: 'address'">
+      <div (click)="visualizePaleontSite(item)" tappable>
+        <div class="titulo">{{item.address}}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

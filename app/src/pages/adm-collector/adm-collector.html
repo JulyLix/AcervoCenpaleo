@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-buttons></ion-menu-buttons>
+        </ion-buttons>
+    <ion-title>Coletor</ion-title>
+    <ion-buttons right>
+      <button ion-button clear (click)="salvar()">
+        Salvar
+      </button>
+      <button *ngIf="collector._id" ion-button icon-only (click)="excluir()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list >
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input [(ngModel)]="collector.nameCollector" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>E-mail</ion-label>
+      <ion-input [(ngModel)]="collector.emailCollector"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>

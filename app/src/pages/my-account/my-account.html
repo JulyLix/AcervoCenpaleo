@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-buttons></ion-menu-buttons>
+      </ion-buttons>
+      <ion-title>Minha Conta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <div  class="topo"></div>
+  <div class="titulo">Minha Conta</div>
+  <div class="imagem" [ngStyle]="{'backgroud-image': 'url(' + LogedUser.Userphoto + ')'}" (click)="cangePicture()">
+    <div class="formulario">
+      <input type="text" placeholder="Nome" [(ngModel)]="LogedUser.nameUser">
+      <input type="text" placeholder="CPF" [(ngModel)]="LogedUser.cpfUser">
+      <input type="text" placeholder="Email" [(ngModel)]="LogedUser.emailUser">
+      <input type="text" placeholder="Senha" [(ngModel)]="LogedUser.passwdUser">
+      <input [(ngModel)]="LogedUser.passwdConfirm" type="password" placeholder="Confirmação da Senha">
+    </div>
+    <div class="button">
+      <button ion-button outline color="primary" round block (click)="save()">
+        Salvar Dados
+      </button>
+    </div>
+  </div>
+</ion-content>
