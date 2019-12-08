@@ -9,7 +9,7 @@ const userModel = new schema ({
     emailUser: {type: String, required: true},
     passwdUser: {type: String, required: true},//Ao menos uma letra e um numero
     photoUser: {type:String, required: false},
-    typeUser: {type:String, required: true},//(verificar privilegios)tipo não selecionavel pelo usuario, apenas cadastros realizados pelo admin podem selecionar
+    typeUser: {type:String, required: false},//(verificar privilegios)tipo não selecionavel pelo usuario, apenas cadastros realizados pelo admin podem selecionar
     creationDate: {type: Date, default: Date.now},
     updateDate: {type: Date}
 });

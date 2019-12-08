@@ -1,13 +1,27 @@
+import { Routes } from 'angular-router';
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
 import { AdmPiecePage } from './adm-piece';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+const routes: Routes = [
+  {
+    path: 'AdmPiece',
+    component: AdmPiecePage
+  }
+];
 
 @NgModule({
-  declarations: [
-    AdmPiecePage,
-  ],
   imports: [
-    IonicPageModule.forChild(AdmPiecePage),
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    IonicPageModule.forChild(routes)
+  ],
+  declarations: [AdmPiecePage],
+  entryComponents: [
+    AdmPiecePage
   ],
 })
 export class AdmPiecePageModule {}

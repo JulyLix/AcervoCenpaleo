@@ -1,9 +1,9 @@
-import { Routes, RouterModule } from 'angular/router';
+import { Routes } from 'angular-router';
 import { UserPage } from './user';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from 'ionic-angular';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
 
 
 const routes: Routes = [
@@ -18,8 +18,11 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    IonicPageModule.forChild(routes)
   ],
-  declarations: [UserPage]
+  declarations: [UserPage],
+  entryComponents: [
+    UserPage
+  ],
 })
 export class UserPageModule {}

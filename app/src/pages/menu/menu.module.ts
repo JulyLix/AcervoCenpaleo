@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes } from 'angular-router';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { MenuPage } from './menu';
@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       { 
         path: 'MyAccount', 
-        loadChildren: '../my-account/my-account.module#MyAccountPageModule',
+        loadChildrenurl: '../my-account/my-account.module#MyAccountPageModule',
       },
       { 
         path: 'Piece', 
@@ -41,8 +41,11 @@ const routes: Routes = [
   declarations: [
     MenuPage,
   ],
+  entryComponents: [
+    MenuPage
+  ],
   imports: [
-    IonicPageModule.forChild(MenuPage),
+    IonicPageModule.forChild(routes),
   ],
 })
 export class MenuPageModule {}

@@ -34,4 +34,8 @@ export class CollectorPage {
     }
   }
 
+  addOrEdit(model?: CollectorModel): void {
+    this.navCtrl.push('AdmCollectorPage', { _collector: model });
+  }
+
 }

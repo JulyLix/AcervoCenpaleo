@@ -1,9 +1,10 @@
 import { PiecePage } from './piece';
+import { PipesModule } from './../../pipes/pipes.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from 'ionic-angular';
-import { RouterModule, Routes } from '@angular/router';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
+import { Routes } from 'angular-router';
 
 
 const routes: Routes = [
@@ -15,11 +16,15 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    PipesModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    IonicPageModule.forChild(routes)
   ],
-  declarations: [PiecePage]
+  declarations: [PiecePage,],
+  entryComponents: [
+    PiecePage
+  ],
 })
 export class PiecePageModule {}

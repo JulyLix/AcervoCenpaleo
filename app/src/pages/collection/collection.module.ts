@@ -1,24 +1,29 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from 'angular-router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CollectionPage } from './collection';
-import { IonicModule } from 'ionic-angular';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
+import { PipesModule } from '../../pipes/pipes.module';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'Collection',
     component: CollectionPage
   }
 ];
 
 @NgModule({
   imports: [
+    PipesModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    IonicPageModule.forChild(routes)
   ],
-  declarations: [CollectionPage]
+  declarations: [CollectionPage],
+  entryComponents: [
+    CollectionPage
+  ],
 })
 export class CollectionPageModule {}

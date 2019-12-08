@@ -6,7 +6,7 @@ module.exports = async (req, res, next) => {
     if (token) {
         try {
             let decoded = await jwt.verify(token, variables.Security.secretKey);
-            req.usuarioLogado = decoded;
+            req.LogedUser = decoded;
             next();
         } catch (error) {
             res.status(401).send({ message: 'Token inválido' });

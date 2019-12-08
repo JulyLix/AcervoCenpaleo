@@ -1,9 +1,10 @@
-import { Routes, RouterModule } from 'angular/router';
+import { Routes } from 'angular-router';
 import { CollectorPage } from './collector';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from 'ionic-angular';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
+import { PipesModule } from '../../pipes/pipes.module';
 
 
 const routes: Routes = [
@@ -15,11 +16,15 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    PipesModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    IonicPageModule.forChild(routes)
   ],
-  declarations: [CollectorPage]
+  declarations: [CollectorPage],
+  entryComponents: [
+    CollectorPage
+  ],
 })
 export class CollectorPageModule {}

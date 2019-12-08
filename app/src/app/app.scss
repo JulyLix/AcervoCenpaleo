@@ -14,3 +14,108 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-content.backImage {
+    background: url(/assets/imagens/fundo.jpg);
+    // neste caso, para não ter problemas no carregamento das imagens após realizar o 'build' do app para dispositivo móvel
+    // deve ser modificado o caminho da(s) imagem(ens) conforme exemplo abaixo
+    // background: url(../assets/imagens/fundo.jpg);
+    background-size: cover;
+  }
+  
+  .backImage .scroll-content {
+    background: rgba(233, 227, 227, 0.6);
+  }
+  
+  .list-transparent .item {
+    background: transparent !important;
+  }
+  .list.list-transparent  .item-input:last-child {
+    border-bottom: none !important;
+  }
+  
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+  }
+  .logo span {
+    color:rgb(2, 174, 254);
+    font-size: 1.8rem;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+  .logo img {
+    width: 120px;
+  }
+  .logo span {
+      color: black;
+      font-size: 1.8rem;
+      text-align: center;
+      display: block;
+      font-weight: bold;
+   }
+  .logo img {
+      width: 120px;
+  }
+  .top {
+      position: fixed;
+      width: 100%;
+      background: blue;
+      height: 200px;
+      background: linear-gradient(to bottom, rgba(6, 64, 173, 1) 0%,  rgb(2, 39, 107) 100%);
+  }
+  .title {
+      position: relative;
+      color: white;
+  }
+  .title p {
+      float: left;
+      font-size: 2rem;
+      margin: 0px;
+      font-weight: bold;
+      margin-left: 15px;
+      margin-top: 15px;
+  }
+  
+  .piece {
+      margin-top: 60px;
+  }
+  .piece .piece {
+     width: 80%;
+     background: white;
+     display: block;
+     position: relative;
+     margin: 0 auto;
+     margin-bottom: 15px;
+     border: 1px solid #E2DDDD;
+     box-shadow: 3px 3px 4px rgba(0,0,0, 0.2);
+     padding: 10px;
+     overflow: auto;
+  }
+  .piece .piece .titulo {
+     color: blue;
+     font-size: 1.6rem;
+     margin-bottom: 4px;
+  }
+  .piece .piece .descricao {
+     height: 50px;
+  }
+  .piece .imagem {
+     float: left;
+     border: 1px solid #E2DDDD;
+     width: 79px;
+     height: 100px;
+     margin-right: 10px;
+     border-radius: 10px;
+     background-size: cover;
+     background-position: 50% 50%;
+  }
+  .piece .piece .preco span {
+     font-weight: bold;
+     font-size: 1.3rem;
+  }
+  .piece .piece .preco {
+     font-size: 2rem;
+  }
+  

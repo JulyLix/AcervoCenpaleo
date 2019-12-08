@@ -9,7 +9,7 @@ export class UtilsHelper {
     }
     public static number = {
         formatCurrency: (valor: number): string => {
-            return Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);;
+            return Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
         }
     }
 }

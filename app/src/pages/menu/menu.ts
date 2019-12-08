@@ -1,4 +1,4 @@
-import { RouterEvent, Router } from '@angular/router';
+import { RouterEvent, Router } from 'angular-router';
 import { Component } from '@angular/core';
 import { IonicPage} from 'ionic-angular';
 

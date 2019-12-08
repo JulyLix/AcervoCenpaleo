@@ -1,7 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-buttons></ion-menu-buttons>
     </ion-buttons>
     <ion-title>Peças</ion-title>
   </ion-toolbar>
@@ -9,33 +8,21 @@
 
 <ion-content no-padding>
   <div class="pieces">
-    <div class="piece" *ngFor="let item of piece | orderBy: 'namePiece'">
+    <div class="piece" *ngFor="let item of piece | orderBy:'namePiece'">
       <div (click)="visualizePiece(item)" tappable>
-        <div class="image" [(ngStyle)]="{'backgrong-image': 'url(' + item.imagePiece + ')'}"></div>
-        <ion-row>
+        <div class="image" [ngStyle]="{'backgrong-image': 'url(' + item.imagePiece + ')'}"></div>
         <div class="title">{{item.namePiece}}</div>
         <div class="number">{{item.numberPiece}}</div>
-        </ion-row>
-        <ion-row>
-          <div class="importance">{{item.importancePiece}}</div>
-          <div class="description">{{item.descriptionPiece}}</div>
-        </ion-row>
-        <ion-row>
-          <div class="collection">{{item.collectionPiece}}</div>
-          <div class="subCollection" *ngFor="let sub of item.subCollectionPiece"></div>
-        </ion-row>
-        <ion-row>
-          <div class="paleontSite">{{item.paleontSitePiece}}</div>
-          <div class="outcrop">{{item.outcropPiece}}</div>
-        </ion-row>
-        <ion-row>          
+        <div class="importance">{{item.importancePiece}}</div>
+        <div class="description">{{item.descriptionPiece}}</div>
+        <div class="collection">{{item.collectionPiece}}</div>
+        <div class="subCollection" *ngFor="let sub of item.subCollectionPiece"></div>
+        <div class="paleontSite">{{item.paleontSitePiece}}</div>
+        <div class="outcrop">{{item.outcropPiece}}</div>          
         <div class="partition">{{item.partitionPiece}}</div>
         <div class="physicalLoc">{{item.physicalLocPiece}}</div>
-        </ion-row>
-        <ion-row>
-          <div class="collector">{{item.collectorPiece}}</div>
-          <div class="status">{{ite.statusPiece}}</div>
-        </ion-row>
+        <div class="collector">{{item.collectorPiece}}</div>
+        <div class="status">{{item.statusPiece}}</div>
       </div>
     </div>
   </div>

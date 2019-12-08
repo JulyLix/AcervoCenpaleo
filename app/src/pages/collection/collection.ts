@@ -2,7 +2,6 @@ import { CollectionProvider } from './../../providers/collection/collection';
 import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, Events } from 'ionic-angular';
 import { CollectionModel } from '../../app/models/collectionModel';
-import { ConfigHelper } from '../../app/helpers/configHelper';
 
 @IonicPage()
 @Component({
@@ -50,4 +49,7 @@ export class CollectionPage {
     this.navCtrl.push('AdmCollectionsPage');
   }
 
+  addOrEdit(model?: CollectionModel): void {
+    this.navCtrl.push('AdmCollectionPage', { _collection: model });
+  }
 }

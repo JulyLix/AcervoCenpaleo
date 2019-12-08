@@ -1,6 +1,6 @@
-import { Platform } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Injectable } from '@angular/core';
+import { CameraOptions, Camera } from '@ionic-native/camera/ngx';
+import { Platform } from 'ionic-angular';
 
 
 @Injectable()
@@ -17,10 +17,10 @@ export class CameraProvider {
         try {
           let options: CameraOptions = {
             quality: 70,
-            destinationType: this.camera.destinationType.DATA_URL,
+            destinationType: this.camera.DestinationType.DATA_URL,
             sourceType: source,
             allowEdit: false,
-            encondingType: this.camera.EncondingType.JPEG,
+            encodingType: this.camera.EncodingType.JPEG,
             saveToPhotoAlbum: false,
             correctOrientation: true
           }
@@ -42,6 +42,13 @@ export class CameraProvider {
   }
 
   public getPictureFromGalery(callback): void {
+    this._getPicture(this.camera.PictureSourceType.CAMERA,
+      photo => {
+        callback(photo)
+      });
+  }
+
+  public takePicture(callback): void {
     this._getPicture(this.camera.PictureSourceType.CAMERA,
       photo => {
         callback(photo)

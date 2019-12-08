@@ -1,8 +1,8 @@
-import { PaleontSiteProvider } from './../../providers/plaeontSite/plaeontSite';
 import { Component, ViewChild, OnInit, AfterContentInit } from '@angular/core';
 import { NavController, NavParams, IonicPage, ActionSheetController, Platform } from 'ionic-angular';
 import { AlertProvider } from '../../providers/alert/alert';
 import { paleontSiteModel } from '../../app/models/paleontSiteModel';
+import { PaleontSiteProvider } from '../../providers/paleont-site/paleont-site';
 declare var google;
 
 @IonicPage()
@@ -11,7 +11,7 @@ declare var google;
   templateUrl: 'adm-paleont-site.html',
 })
 export class AdmPaleontSitePage implements OnInit, AfterContentInit {
-
+  
   map;
   @ViewChild('mapElement') mapElement;
 

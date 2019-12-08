@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from "@angular/core";
     name: 'real',
 })
 export class RealPipe implements PipeTransform {
-    transform(value: number, ...args) {
+    transform(value: number, ..._args) {
         return UtilsHelper.number.formatCurrency(value);
     }
 }

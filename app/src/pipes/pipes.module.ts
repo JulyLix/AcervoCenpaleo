@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RealPipe } from './real/real';
 import { OrderByPipe } from './order-by/order-by';
+import { RealPipe } from './real/real';
 @NgModule({
-	declarations: [RealPipe,
-    OrderByPipe],
+	declarations: [OrderByPipe,
+    RealPipe],
 	imports: [],
-	exports: [RealPipe,
-    OrderByPipe]
+	exports: [OrderByPipe,
+    RealPipe]
 })
 export class PipesModule {}

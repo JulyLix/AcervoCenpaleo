@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CollectionModel } from '../../app/models/collectionModel';
 import { CollectionProvider } from '../../providers/collection/collection';
 
+@IonicPage()
 @Component({
   selector: 'app-adm-collection',
   templateUrl: './adm-collection.html',

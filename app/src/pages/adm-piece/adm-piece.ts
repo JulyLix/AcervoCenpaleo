@@ -1,3 +1,4 @@
+//import { CameraOriginal } from '@ionic-native/camera';
 import { Component } from '@angular/core';
 import { NavController, NavParams, IonicPage, ActionSheetController, Platform } from 'ionic-angular';
 import { PieceModel } from '../../app/models/pieceModel';
@@ -34,7 +35,7 @@ export class AdmPiecePage {
     private collectionSrv: CollectionProvider,
     private paleontSiteSrv: PaleontSiteProvider,
     private alertSrv: AlertProvider,
-    private cameraSrv: CameraProvider,
+    private cameraSrv: CameraProvider
     ) {
 
       let _piece = this.navParams.get('_piece');

@@ -1,14 +1,13 @@
 <ion-header>
   <ion-navbar color="primary">
       <ion-buttons slot="start">
-          <ion-menu-buttons></ion-menu-buttons>
         </ion-buttons>
     <ion-title>Coletor</ion-title>
     <ion-buttons right>
-      <button ion-button clear (click)="salvar()">
+      <button ion-button clear (click)="addOrEdit({})">
         Salvar
       </button>
-      <button *ngIf="collector._id" ion-button icon-only (click)="excluir()">
+      <button *ngIf="collector._id" ion-button icon-only (click)="delete()">
         <ion-icon name="trash"></ion-icon>
       </button>
     </ion-buttons>

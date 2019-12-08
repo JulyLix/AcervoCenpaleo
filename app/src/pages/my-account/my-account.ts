@@ -54,7 +54,7 @@ export class MyAccountPage {
 
   async LoadData(): Promise<void> {
     try {
-      let user = <userModel>JSON.parse(localStorage.getItem(ConfigHelper.storageKeys.selectCategory.user));
+      let user = <userModel>JSON.parse(localStorage.getItem(ConfigHelper.storageKeys.selectCategory));
       let userResult = await this.userSrv.getByUid(user.id);
       if(userResult.success) {
         this.LogedUser = <userModel>userResult.data;

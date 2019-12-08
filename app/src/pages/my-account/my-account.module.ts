@@ -1,14 +1,14 @@
-import { Routes, RouterModule } from 'angular/router';
+import { Routes } from 'angular-router';
 import { MyAccountPage } from './my-account';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from 'ionic-angular';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
 
 
 const routes: Routes = [
   {
-    path: 'myAccount',
+    path: 'MyAccount',
     component: MyAccountPage
   }
 ];
@@ -18,8 +18,11 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    IonicPageModule.forChild(routes)
   ],
-  declarations: [MyAccountPage]
+  declarations: [MyAccountPage],
+  entryComponents: [
+    MyAccountPage
+  ],
 })
 export class MyAccountPageModule {}

@@ -38,4 +38,8 @@ export class PaleontSitePage {
     modal.present();
   }
 
+  addOrEdit(model?: paleontSiteModel): void {
+    this.navCtrl.push('AdmPaleontSitePage', { _paleontSite: model });
+  }
+
 }

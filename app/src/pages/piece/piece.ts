@@ -50,4 +50,8 @@ export class PiecePage {
     }
   }
 
+  addOrEdit(model?: PieceModel): void {
+    this.navCtrl.push('AdmPiecePage', { _piece: model });
+  }
+
 }
