@@ -1,4 +1,4 @@
-import { Camera } from '@ionic-native/camera/ngx';
+import { Camera } from '@ionic-native/camera';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, Spinner } from 'ionic-angular';
@@ -17,8 +17,8 @@ import { PaleontSiteProvider } from '../providers/paleont-site/paleont-site';
 import { UserProvider } from '../providers/user/user';
 import { CameraProvider } from '../providers/camera/camera';
 import { HttpClientModule } from '@angular/common/http';
-import { OneSignal } from '@ionic-native/onesignal/ngx';
-import { Network } from '@ionic-native/network/ngx';
+import { OneSignal } from '@ionic-native/onesignal';
+import { Network } from '@ionic-native/network';
 
 @NgModule({
   declarations: [
