@@ -1,4 +1,4 @@
-import { OneSignal } from '@ionic-native/onesignal';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 import { UserProvider } from './../providers/user/user';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';

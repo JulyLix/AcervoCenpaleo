@@ -13,7 +13,7 @@ declare var google;
 export class AdmPaleontSitePage implements OnInit, AfterContentInit {
   
   map;
-  @ViewChild('mapElement', {static: false}) mapElement;
+  @ViewChild('mapElement') mapElement;
 
   paleontSite: paleontSiteModel;
 
