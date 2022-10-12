@@ -29,7 +29,7 @@
     "@ionic/storage": "2.2.0",
     "angular-router": "0.0.2",
     "cordova": "9.0.0",
-    "cordova-android": "^6.3.0",
+    "cordova-android": "^11.0.0",
     "cordova-android-support-gradle-release": "^3.0.1",
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-network-information": "2.0.2",
